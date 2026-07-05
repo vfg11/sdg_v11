@@ -1,0 +1,57 @@
+name: Compilar EXE para Windows
+
+# Cuándo se ejecuta:
+# - Manualmente desde la web de GitHub (workflow_dispatch)
+# - Automáticamente en cada push a la rama main
+on:
+  workflow_dispatch:   # botón manual en la web
+  push:
+    branches: [main]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest    # ← aquí está la clave: máquina Windows real
+
+    steps:
+      # 1. Descarga el código del repositorio en la máquina Windows
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      # 2. Instala Python 3.11 en la máquina Windows
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. Instala las dependencias del proyecto
+      - name: Instalar dependencias
+        run: |
+          pip install pyqt6 reportlab nuitka ordered-set
+
+      # 4. Compila con Nuitka
+      - name: Compilar con Nuitka
+        run: |
+          python -m nuitka `
+            --standalone `
+            --onefile `
+            --enable-plugin=pyqt6 `
+            --include-package=io_utils `
+            --include-package=items `
+            --include-package=widgets `
+            --include-package=reportlab `
+            --include-data-files=colores_biblioteca.txt=colores_biblioteca.txt `
+            --windows-console-mode=disable `
+            --windows-product-name="Editor de Diagramas de Senales" `
+            --windows-file-version=11.0.0.0 `
+            --output-filename=SDG_v11.exe `
+            --output-dir=dist `
+            main.py
+
+      # 5. Publica el exe como artefacto descargable
+      - name: Publicar EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: SDG_v11_Windows
+          path: dist/SDG_v11.exe
+          retention-days: 30    # disponible 30 días para descargar
+
