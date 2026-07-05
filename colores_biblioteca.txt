@@ -1,0 +1,109 @@
+# ──────────────────────────────────────────────────────────────────────────
+# colores_biblioteca.txt — Tabla de colores para la biblioteca de bloques
+#
+# Uso: al definir o editar un bloque en el fichero de biblioteca (.txt),
+# el último campo de cada línea {…} corresponde al color de fondo del bloque.
+# Usa el código hexadecimal de esta tabla para mantener coherencia visual.
+#
+# Formato de esta tabla:
+#   <código_hex>  <nombre_descriptivo>
+#
+# El código hexadecimal es case-insensitive en el importador (#E8F8E8 = #e8f8e8).
+# ──────────────────────────────────────────────────────────────────────────
+
+# ── Blancos y grises ───────────────────────────────────────────────────────
+#FFFFFF  Blanco puro
+#F8F8F8  Blanco humo
+#F4F4F4  Gris muy claro
+#E8E8E8  Gris claro
+#D0D0D0  Gris medio claro
+#A8A8A8  Gris medio
+#787878  Gris oscuro
+#484848  Gris muy oscuro
+
+# ── Azules (Control, Regulación) ──────────────────────────────────────────
+#E8F0FE  Azul muy pálido       — uso general, bloques de control
+#D0E4FF  Azul pálido
+#B8D4FF  Azul claro
+#8AB8F0  Azul medio claro
+#5A9BD4  Azul medio
+#2E6DB4  Azul corporativo
+#1A3A6B  Azul oscuro
+#0D1B3E  Azul marino
+
+# ── Verdes (Lógica, Digital) ──────────────────────────────────────────────
+#E8F8E8  Verde muy pálido      — lógica digital (AND, OR, NOT…)
+#C8ECC8  Verde pálido
+#A8E0A8  Verde claro
+#78C878  Verde medio claro
+#4CAF50  Verde medio
+#2E7D32  Verde oscuro
+#1B5E20  Verde muy oscuro
+
+# ── Amarillos y ámbar (Señal, Selección) ──────────────────────────────────
+#FFFDE7  Amarillo muy pálido   — señal, selección
+#FFF9C4  Amarillo pálido
+#FFF176  Amarillo claro
+#FFD600  Amarillo intenso
+#FFB300  Ámbar
+#FF8F00  Ámbar oscuro
+#E65100  Naranja oscuro
+
+# ── Naranjas (Alarmas, Monitorización) ────────────────────────────────────
+#FFF3E0  Naranja muy pálido    — monitorización, alarmas
+#FFE0B2  Naranja pálido
+#FFCC80  Naranja claro
+#FFA726  Naranja medio
+#FB8C00  Naranja
+#E65100  Naranja oscuro
+
+# ── Rojos y rosas (Emergencia, Límites) ───────────────────────────────────
+#FFF0F0  Rojo muy pálido       — límites, saturación
+#FFD0D0  Rojo pálido
+#FFAAAA  Rojo claro
+#EF9A9A  Rojo medio claro
+#E57373  Rojo medio
+#C62828  Rojo oscuro
+#B71C1C  Rojo muy oscuro
+
+# ── Púrpuras y violetas (Matemáticas, Cálculo) ────────────────────────────
+#F5F0FF  Violeta muy pálido    — usuario, bloques personalizados
+#EDE7F6  Violeta pálido
+#D1C4E9  Violeta claro
+#B39DDB  Violeta medio claro
+#9575CD  Violeta medio
+#6A1B9A  Violeta oscuro
+#4A148C  Violeta muy oscuro
+
+# ── Cianes y turquesas (Equipos, Actuadores) ──────────────────────────────
+#E0F7FA  Cian muy pálido       — equipos, actuadores
+#B2EBF2  Cian pálido
+#80DEEA  Cian claro
+#4DD0E1  Cian medio claro
+#00BCD4  Cian
+#00838F  Cian oscuro
+#006064  Cian muy oscuro
+
+# ── Marrones y tierra (Instrumentación de campo) ──────────────────────────
+#EFEBE9  Marrón muy pálido     — instrumentación de campo
+#D7CCC8  Marrón pálido
+#BCAAA4  Marrón claro
+#A1887F  Marrón medio claro
+#795548  Marrón medio
+#4E342E  Marrón oscuro
+
+# ──────────────────────────────────────────────────────────────────────────
+# COLORES ESTÁNDAR POR CATEGORÍA (recomendados)
+# ──────────────────────────────────────────────────────────────────────────
+#
+# Categoría          Color recomendado    Código
+# ─────────────────  ───────────────────  ───────
+# Lógica             Verde muy pálido     #E8F8E8
+# Control            Azul muy pálido      #E8F0FE
+# Matemáticas        Azul pálido          #D0E4FF
+# Señal              Amarillo muy pálido  #FFFDE7
+# Equipos            Cian muy pálido      #E0F7FA
+# Usuario / Custom   Violeta muy pálido   #F5F0FF
+# Alarmas            Naranja muy pálido   #FFF3E0
+# Límites            Rojo muy pálido      #FFF0F0
+# ──────────────────────────────────────────────────────────────────────────
